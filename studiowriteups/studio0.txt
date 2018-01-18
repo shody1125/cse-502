@@ -4,7 +4,7 @@ Your TA's name:
 
 Students in your studio group:
 
-    Name        Student ID (begins with a 4)
+    Name: Fa Long        Student ID (begins with a 4):462512
 	
 1.
 2.
@@ -16,32 +16,41 @@ Students in your studio group:
 Below each question, type in your short, to-the-point answers.
 
 Question A1: 
-	What do you see in both plots? 
-	Are there any differences between the two?
+	What do you see in both plots?
+	> I saw a almost straight line for  tick, and broken line for time.
+	Are there any differences between the two? 
+	> yes, tick plot has continues grow up value, but time plot stops at middle.
 	What could account for those differences?
+	> since the calculation is too fast so on the value of time, it is almost the same counting 100000 or 200000.
 	
 Discuss this (and all your responses for this assignment) with your TA as you go.
 
 Question A2:
 	Why do the times provided for Quadratic produce such a nice plot, while the original values of Linear did not?
+	>since with quadratic, the times od calcualtion actually increased a lot,especially when n grows bigger, it cost computer more time.
 	
 Question A3: 
 	From the runs you have tried so far, how does the placement of ticker.tick() calls affect the plots you see? 
+	> the tick placed in the most inner loop have the biggest effect on the shape of the curve, it makes the curve curved up.
+	>the tick placed in the out side loop have little effect on the shape of the curve.
 	In particular, do the changes affect the shapes of the curves, the values plotted, or both
 	
 Question A4: 
 	In terms of n, how would you characterize, in the most simple terms, 
 	the time and ticks curves that have been generated so far?
+	it's a curve of n^2+n, main factor is n^2
 		
 Question A5: 
 	What would happen if you deleted all ticker.tick() calls in the innermost loop,
 	while leaving other calls to ticker.tick() that you just placed in run()?
-	
+	< the quadratic actually becomes linear.
+	< the function actually becomes (0*n)^2+n+1.
 Question B1:
 	What do you see? How do the curves reflect the code inside AddsTwoNumbers?
 	Do you think the value of n matters here in terms of the time it takes to perform the operation?
 	Why or why not?
-	
+	< the plot is a constant value, which shows that the ticks take for addition, no matter how big is it. is always the same.
+	<no, it's the same for computer calculating 1+1 and 9999+9999.
 Question B2:
 	What do the data and plot tell you about the time it takes to allocate an array of n integers?
 	Is it reasonable to say that the line of code

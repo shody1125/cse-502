@@ -26,12 +26,17 @@ public class Quadratic extends QuietAlgorithm {
 	 */
 	@Override
 	public void run() {
+		ticker.tick();
 		for (int i=0; i < n; ++i) {
+			ticker.tick();
+			ticker.tick();
+			ticker.tick();
 			for (int j=0; j < n; ++j) {
 				//
 				// Statement below takes one operation
 				this.value = this.value + i;
-				ticker.tick();
+				
+				
 			}
 		}	
 	}
