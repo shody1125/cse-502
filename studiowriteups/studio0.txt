@@ -45,6 +45,7 @@ Question A5:
 	while leaving other calls to ticker.tick() that you just placed in run()?
 	< the quadratic actually becomes linear.
 	< the function actually becomes (0*n)^2+n+1.
+	
 Question B1:
 	What do you see? How do the curves reflect the code inside AddsTwoNumbers?
 	Do you think the value of n matters here in terms of the time it takes to perform the operation?
