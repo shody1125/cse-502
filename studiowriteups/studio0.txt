@@ -54,29 +54,34 @@ Question B1:
 	<no, it's the same for computer calculating 1+1 and 9999+9999.
 Question B2:
 	What do the data and plot tell you about the time it takes to allocate an array of n integers?
+	>the tick plot tells me it counts the same number while n changes, but the time plot tells me it takes longer time when n grows bigger.
 	Is it reasonable to say that the line of code
 
  		this.array = new int[this.n]
  		
 	takes a constant amount of time, independent of the value of this.n?
-	
+	<no, the time plot shows that with array grows bigger, this line cinstant more amounts of time.
 Question B3:
 	Do the ticks agree in shape with the time we measured in running the Allocates code?
-	
+	< the ticks actually can't reflect the things that time plots show.
 Question B4:
 	Are the plots more similar to each other than before?
+	> yes it is.
 	What does this tell you about how much time it takes to allocate an array of n integers?
-	
+	> it takes n executions for allocate an array.
 Question B5:
 	Which group do you expect to finish first?
+	> the decimal group.
 	Can you formalize, in terms of n the amount of work (ticks)
 	that each group must do to write n in the form required for that group?
-
+	> decimal group: the number of decimals n have
+	> tally mark: n.
 	Both groups achieve the same result, namely the recording of an integer n.
 
 		Under what circumstances is the decimal notation more efficient than tally marks?
+		> if n>=2, it is always more efficent for decimal.
 		Under what circumstances is the tally mark notation more efficient than decimal notation?
-		
+		> only when n=1.
 	If you are not sure, take a look the link from the assignment web page.
 	
 Question D1:
