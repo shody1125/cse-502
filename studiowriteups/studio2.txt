@@ -8,9 +8,9 @@ Students in your studio group:
 
     Name        Student ID (begins with a 4)
 	
-1.
-2.
-3.
+1.Fa long        462512
+2.Di Xiao        462575	
+3.Jiwen Zhang 	 462447
 4.
 5.
 6.
@@ -21,21 +21,27 @@ Part A
 
 What do you see in the plots for ticks and time?
 
+>the curve is like a exponential growth.
+
 How would you characterize those curves?
 
+>the curve is O(x^2) since it's a Equal difference sequence summation problem.
+
 Based on the current code for addLast, why do you see this behavior?
+
+because everytime we add an element to the end of the list, we need to go over first n elements, so the ticker we use is N+1, and then N+2....for equal difference summation, the result is a exponential grow result
 
 Part B
 
 What behavior do you see now for appending n items to a list if you use a tail reference?
-
+>linear
 While we have reasoned so far only about time, if we are adding n elements to the end of a list, what is the asymptotic complexity of the additional space required when using the tail reference?
-
+2n
 Under what conditions would you recommend using a linked list with a tail reference vs. a linked list without at tail reference?
-
+<the size of the list is less than the operation times for haveing a tail element.
 Part C
 
 Why does getSize() take the time it does?
-
+it counts N+1 times
 How did you achieve Θ(1) performance for getSize()?
-
+announce a new element for count;

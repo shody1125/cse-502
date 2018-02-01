@@ -15,7 +15,6 @@ public class Size extends QuietAlgorithm {
 	protected Ticker ticker;
 	protected List<Integer> list;
 	private Random random;
-	
 	public Size() {
 		this.random = new Random();
 	}
