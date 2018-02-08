@@ -8,9 +8,9 @@ Students in your studio group:
 
     Name        Student ID (begins with a 4)
 	
-1.
-2.
-3.
+1.Jiwen Zhang    462447
+2.Fa Long        462512
+3.Di Xiao 		462575
 4.
 5.
 6.
