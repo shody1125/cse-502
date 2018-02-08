@@ -14,24 +14,39 @@ public class UnorderedList<T extends Comparable<T>> implements PriorityQueue<T> 
 	@Override
 	public boolean isEmpty() {
 		//
-		// FIXME
+		if(list.size()==0) {
+			return true;
+		}else {
+			return false;
+		}
 		//
-		return false;
+		//return list.isEmpty();
 	}
 
 	@Override
 	public void insert(T thing) {
 		//
-		// FIXME
+		list.add(thing);
 		//
 	}
 
 	@Override
 	public T extractMin() {
-		//
-		// FIXME
-		//
-		return null;
-	}
+	//	if(!this.isEmpty()) {
+			T min=list.get(0);
+			int index=0;
+			for(int i=0;i<list.size();i++) {
+				if(min.compareTo(list.get(i))>0) {
+					min=list.get(i);
+					index=i;
+				}
+			}
+			list.remove(index);
+			return min;	
+		}
+//		else {
+//			return null;
+//		}
+//	}
 
 }
