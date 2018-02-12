@@ -56,6 +56,9 @@ public class Decreaser<T extends Comparable<T>> {
 		return this.thing;
 	}
 	
+	public int getloc() {
+		return this.loc;
+	}
 	public String toString() {
 		return "" + thing + " at " + loc;
 	}

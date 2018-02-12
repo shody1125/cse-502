@@ -64,7 +64,9 @@ public class MinHeap<T extends Comparable<T>> implements PriorityQueue<T> {
 		// You have to now put ans into the heap array
 		//   Recall in class we reduced insert to decrease
 		//
-		// FIXME
+		array[size]=ans;
+		array[size].loc=size;
+		decrease(ans.loc);
 		//
 		return ans;
 	}
@@ -96,6 +98,24 @@ public class MinHeap<T extends Comparable<T>> implements PriorityQueue<T> {
 	 *     decreased in value
 	 */
 	void decrease(int loc) {
+		
+		if(loc>1) {
+			int par= loc/2;
+			
+			if(array[loc].getValue().compareTo(array[par].getValue()) < 0) {
+				Decreaser<T> temp= array[par];
+				array[par]=array[loc];
+				array[loc]=temp;
+				array[par].loc=par;
+				array[loc].loc=loc;
+		//		System.out.println(array[par].loc);
+		//		System.out.println(par);
+				  
+				decrease(par);
+			}
+			
+		}
+		
 		//
 		// As described in lecture
 		//
@@ -117,11 +137,15 @@ public class MinHeap<T extends Comparable<T>> implements PriorityQueue<T> {
 		//    Be sure to store null in an array slot if it is no longer
 		//      part of the active heap
 		//
-		// FIXME
+		array[1]=array[this.size];
+		array[1].loc=1;
+		array[this.size]=null;
+		size--;
+		
+		heapify(1);
 		//
 		return ans;
 	}
-
 	/**
 	 * As described in lecture, this method looks at a parent and its two 
 	 *   children, imposing the heap property on them by perhaps swapping
@@ -132,9 +156,39 @@ public class MinHeap<T extends Comparable<T>> implements PriorityQueue<T> {
 	private void heapify(int where) {
 		//
 		// As described in lecture
-		//  FIXME
-		//
+		int child_1=where*2;
+		int child_2=where*2+1;
+		if(child_2<=this.size) {
+	//	if(array[child_1]!=null && array[child_2]!=null) {
+			if(array[child_1].getValue().compareTo(array[child_2].getValue()) <= 0 && array[child_1].getValue().compareTo(array[where].getValue()) < 0) {
+				Decreaser<T> temp= array[where];
+				array[where]=array[child_1];
+				array[child_1]=temp;
+				array[where].loc=where;
+				array[child_1].loc=child_1;
+				heapify(child_1);
+			}else if(array[child_1].getValue().compareTo(array[child_2].getValue()) > 0 &&array[child_2].getValue().compareTo(array[where].getValue()) < 0) {
+				Decreaser<T> temp= array[where];
+				array[where]=array[child_2];
+				array[child_2]=temp;
+				array[where].loc=where;
+				array[child_2].loc=child_2;
+				heapify(child_2);
+//			}
+			}
+		}if(child_1==this.size) {
+			if(array[child_2]==null && array[child_1].getValue().compareTo(array[where].getValue()) < 0) {
+				Decreaser<T> temp= array[where];
+				array[where]=array[child_1];
+				array[child_1]=temp;
+				array[where].loc=where;
+				array[child_1].loc=child_1;
+				heapify(child_1);
+			}
+		}
 	}
+	
+	
 	
 	/**
 	 * Does the heap contain anything currently?
